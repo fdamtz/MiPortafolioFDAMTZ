@@ -1,0 +1,342 @@
+/*CSS Reset / Normalize*/
+/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
+en las secciones señaladas */
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root{
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+   --color-fondo: rgb(255, 210, 210);
+   --color-link: #e22f5c;
+   --bg-boxes:  rgba(255, 194, 252, 0.7);
+   --bg-shadow-boxes: rgba(255, 69, 246, 0.7);
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--color-fondo) ;
+    font-family: 'Victor Mono';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+
+ol, ul,li {
+    list-style: none;
+}
+
+
+/*TUDO menu header*/
+
+.menu__header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 6rem;
+}
+
+
+.menu__nav h3{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.menu__nav{
+    display: flexbox;
+    grid-auto-flow: column;
+}
+
+
+
+.menu__nav ul{
+    display: flex;
+    justify-content: space-between;    
+}
+
+
+.menu__nav ul li{
+    font-size: 15px;
+    border: none;
+    position: relative;
+    z-index: 0;
+    display: flex;
+}
+
+.menu__lista li a{
+    position:relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #66323f;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    justify-content: space-between;
+}
+
+.menu__lista li a:hover{
+    background: #ff4f7bd3;
+    box-shadow: 0 0 10px #ff235a, 0 0 40px #ff93ae, 0 0 #e22f5c;
+    border-radius: 20px;
+    padding: 5px 5px 5px 5px;
+}
+
+
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+/* *****************PROFILE**************************** */
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+
+.title{
+    display: flex;
+    padding: 0.5rem 8rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title__div{
+    width: 73%;
+}
+
+.title__div h1{
+    font-size: 2.4em;
+    font-weight: bold;
+    padding-top: 1rem;
+
+}
+
+.title__div h2{
+    font-size: 1em;
+    font-style: italic;
+    padding-top: 1rem;
+}
+
+.title__div__network{
+    padding-top: 1rem;
+}
+
+.title__div__network a{
+    text-decoration: none;
+    font-size: 1.5em;
+    padding-right: 2rem;
+    color: black;
+}
+
+.title__div__network a:hover{
+    text-decoration: underline;
+}
+
+.title__profile{
+    width: 20%;
+}
+
+
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+/* *****************ABOUT ME*************************** */
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+
+.about{
+    height: 90%;
+    width: 30%;
+    margin: -30% 5px 5px 60%;
+    justify-content: top;
+    padding: 0.5rem 1rem;
+    background: #ffb1d1b9;
+    box-shadow: 1px 3px 4px 2px rgba(199, 63, 161, 0.7);
+    border-radius: 50px;
+}
+
+
+.about__container h3{
+    text-align: center;
+}
+
+.about div p{
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+.about__container div img{
+    width: 100px;
+    image-resolution: high resolution;
+}
+
+
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+/* **************SKILLS & HOBBIES********************** */
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+
+.skills, .hobbies{
+    width: 100%;
+    margin: 1rem auto;
+    margin-top: 60px;
+}
+
+.skills-container, .hobbies-container{
+    width: 40%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-box, .hobbies-box{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+    justify-content: center;
+}
+
+.skills-item, .hobbies-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: var(--bg-boxes);
+    border-radius: 1rem;
+    min-width: 150px;
+    max-width: 100%;
+    height: 100px;
+    margin: .2rem .2rem;
+    padding: 1rem;
+    transition: all 1s;
+}
+
+.skills-item:hover, .hobbies-item:hover{
+    box-shadow: 0px 20px 35px 0px var(--bg-shadow-boxes);
+    border-radius: 20px;
+}
+
+.hobbies-item img{
+    width: max-content;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.skills-item h3, .hobbies-item h3{
+    font-size: 15px;
+    text-align: center;
+}
+
+
+
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+/* ********************ACADEMIC************************ */
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+
+
+.academic-content{
+    
+    align-items:center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;    
+}
+
+.academic__boxes{
+    background: rgba(255, 194, 252, 0.7);
+    padding: 30px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .35s;
+}
+
+.academic__boxes:hover {
+    transform: translateY(-20px);
+    box-shadow: 0px 20px 35px 0px rgba(255, 69, 246, 0.7);
+}
+
+.academic-content h4{
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 13px;
+}
+.academic-content p{
+    font-weight: 250;
+    margin-bottom: 1.3rem;
+    line-height: 1.5rem;
+}
+
+
+
+
+/* CONTACTO BOX */
+.input__group{
+    margin: -25% 10px 10px 10%;
+    margin-left: 60%;
+    box-shadow: 0 0 20px rgba(199, 63, 161, 0.7);
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    background: #ff93ae;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 14px;
+    height: 480px;
+}
+
+.input__group h2{
+    color: #ff235a;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.input__group input, textarea{
+    background-color: #ffd2d2;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.input__group textarea{
+    height: 20px;
+}
+.input__group label{
+    font-weight: bold;
+}
+
+::placeholder{
+    color: #627a71;
+    font-size: 15px;
+}
+
+:focus{
+    outline: 1px solid #ff00bf;
+    box-shadow: 0 0 20px rgba(173, 0, 124, 0.849);
+}
+
+.btn{
+    background-color: #e7229c;
+    color: #fff;
+    font-size: 18px;
+    height: 50px;
+    border: 1px solid #ff235a;
+    border-radius: 20px;
+}
+
+.btn:hover{
+   box-shadow: 0 0 20px rgb(255, 0, 149);
+   outline: 1px solid #ff00bf;
+   color: #fff;
+   background: #ea00ff;
